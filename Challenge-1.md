@@ -15,17 +15,18 @@ Your task is to create a system that checks all the clocks in the town and synch
 ### Specifications
 
 1. **Clock Data:**
-    - The clock times are provided in a 24-hour format.
-    - The Grand Clock Tower is at 15:00.
-    - Clock times around town:
-        - Clock 1: 14:45
-        - Clock 2: 15:05
-        - Clock 3: 15:00
-        - Clock 4: 14:40
+
+   - The clock times are provided in a 24-hour format.
+   - The Grand Clock Tower is at 15:00.
+   - Clock times around town:
+     - Clock 1: 14:45
+     - Clock 2: 15:05
+     - Clock 3: 15:00
+     - Clock 4: 14:40
 
 2. **Time Analysis and Output:**
-    - You need to determine how many minutes each clock is ahead or behind the Grand Clock Tower.
-    - The result should be an array of integers representing the time difference in minutes. Positive values indicate the clock is ahead, and negative values indicate it's behind.
+   - You need to determine how many minutes each clock is ahead or behind the Grand Clock Tower.
+   - The result should be an array of integers representing the time difference in minutes. Positive values indicate the clock is ahead, and negative values indicate it's behind.
 
 ### Constraints
 
@@ -42,15 +43,17 @@ Your task is to create a system that checks all the clocks in the town and synch
 
 ### Tips to Get Started
 
+6
+
 1. If you're using a GitHub Codespace, you're ready to go!
-1. If running locally, ensure that you have your target language/framework installed. 
-    - [Node.js](https://nodejs.org)
-    - [Python](https://www.python.org/downloads/)
-    - [.NET](https://dot.net)
-1. Create a folder for your code. 
-    - JavaScript: Create a folder called `tempora` and add a file named `app.js`.
-    - Python: Create a folder called `tempora` and add a file named `app.py`.
-    - C#: Create a folder called `tempora` and run `dotnet new console`.
+1. If running locally, ensure that you have your target language/framework installed.
+   - [Node.js](https://nodejs.org)
+   - [Python](https://www.python.org/downloads/)
+   - [.NET](https://dot.net)
+1. Create a folder for your code.
+   - JavaScript: Create a folder called `tempora` and add a file named `app.js`.
+   - Python: Create a folder called `tempora` and add a file named `app.py`.
+   - C#: Create a folder called `tempora` and run `dotnet new console`.
 
 ### GitHub Copilot Tips
 
@@ -74,7 +77,7 @@ See if you can use Copilot to find out the complexity (BigO notation) of the cod
 
 1. Highlight all of the code with <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>A</kbd>.
 
-1. Press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>I</kbd> to open the inline chat. 
+1. Press <kbd>Ctrl</kbd>/<kbd>Cmd</kbd>+<kbd>I</kbd> to open the inline chat.
 
 1. Type "/doc"
 
