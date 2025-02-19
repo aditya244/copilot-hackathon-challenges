@@ -1,3 +1,4 @@
+// Function to fetch scrolls data from the API
 async function fetchScrolls() {
   const apiUrl =
     "https://raw.githubusercontent.com/sombaner/copilot-hackathon-challenges/main/Data/Scrolls.txt";
@@ -14,11 +15,13 @@ async function fetchScrolls() {
   }
 }
 
+// Function to decipher scroll data by extracting text between {* *}
 function decipherScroll(data) {
   const matches = data.match(/\{\*(.*?)\*\}/g);
   return matches ? matches.map((match) => match.slice(2, -2).trim()) : [];
 }
 
+// Function to retrieve and decipher scrolls of Eldoria
 async function retrieveScrollsOfEldoria() {
   try {
     const data = await fetchScrolls();
@@ -29,6 +32,7 @@ async function retrieveScrollsOfEldoria() {
   }
 }
 
+// Retrieve and log the deciphered scrolls
 retrieveScrollsOfEldoria().then((decipheredScroll) => {
   console.log(decipheredScroll);
 });
