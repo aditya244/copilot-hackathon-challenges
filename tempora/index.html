@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempora Clocks</title>
+    <!-- unable to use npm install to using the script in the html only -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../../copilot-hackathon-challenges/Images/tempora-clocks.jpg') no-repeat center center fixed;
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+        .clock {
+            position: absolute;
+            color: black;
+            font-size: 24px;
+            font-weight: bold;
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #clock1 { top: 18%; left: 28%; }
+        #clock2 { top: 18%; left: 68%; }
+        #clock3 { top: 48%; left: 48%; transform: translate(-50%, -50%); }
+        #clock4 { top: 78%; left: 28%; }
+    </style>
+</head>
+<body>
+    <div id="clock1" class="clock"></div>
+    <div id="clock2" class="clock"></div>
+    <div id="clock3" class="clock"></div>
+    <div id="clock4" class="clock"></div>
+
+    <script>
+        function parseTime(time) {
+            const [hours, minutes] = time.split(":").map(Number);
+            return hours * 60 + minutes;
+        }
+
+        function calculateTimeDifference(clockTimes, grandClockTime) {
+            const grandClockMinutes = parseTime(grandClockTime);
+            return clockTimes.map(clockTime => parseTime(clockTime) - grandClockMinutes);
+        }
+
+        const grandClockTime = "15:00";
+        const clockTimes = ["14:45", "15:05", "15:00", "14:55"];
+        const timeDifferences = calculateTimeDifference(clockTimes, grandClockTime);
+
+        document.getElementById('clock1').textContent = `Clock 1: ${timeDifferences[0]} mins`;
+        document.getElementById('clock2').textContent = `Clock 2: ${timeDifferences[1]} mins`;
+        document.getElementById('clock3').textContent = `Clock 3: ${timeDifferences[2]} mins`;
+        document.getElementById('clock4').textContent = `Clock 4: ${timeDifferences[3]} mins`;
+    </script>
+</body>
+</html>
